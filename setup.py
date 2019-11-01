@@ -8,7 +8,7 @@ setup(
     description='Django Rest Framework UJSON Renderer',
     author='Gizmag',
     author_email='tech@gizmag.com',
-    url='https://github.com/gizmag/drf-ujson-renderer',
+    url='https://github.com/Amertz08/drf-ujson-renderer',
     packages=find_packages(),
     install_requires=['django', 'ujson', 'djangorestframework<3.10'],
     extras_require={
