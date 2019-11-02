@@ -2,6 +2,7 @@ Django Rest Framework UJSON Renderer
 ==================
 
 [![Build Status](https://travis-ci.org/gizmag/drf-ujson-renderer.png?branch=master)](https://travis-ci.org/gizmag/drf-ujson-renderer)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/drf_ujson)
 
 Django Rest Framework renderer using [ujson](https://github.com/esnme/ultrajson)
 
