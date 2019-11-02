@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-from rest_framework.compat import six
 from rest_framework.renderers import BaseRenderer
 import ujson
 
@@ -24,6 +22,6 @@ class UJSONRenderer(BaseRenderer):
         ret = ujson.dumps(data, ensure_ascii=self.ensure_ascii)
 
         # force return value to unicode
-        if isinstance(ret, six.text_type):
+        if isinstance(ret, str):
             return bytes(ret.encode("utf-8"))
         return ret

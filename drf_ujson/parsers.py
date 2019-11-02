@@ -1,8 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.conf import settings
-from rest_framework.compat import six
 from rest_framework.parsers import BaseParser, ParseError
 from rest_framework.renderers import JSONRenderer
 import ujson
@@ -31,4 +27,4 @@ class UJSONParser(BaseParser):
             data = stream.read().decode(encoding)
             return ujson.loads(data)
         except ValueError as exc:
-            raise ParseError("JSON parse error - %s" % six.text_type(exc))
+            raise ParseError("JSON parse error - %s" % exc)
