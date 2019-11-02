@@ -2,6 +2,9 @@ from rest_framework.renderers import BaseRenderer
 import ujson
 
 
+__all__ = ["UJSONRenderer"]
+
+
 class UJSONRenderer(BaseRenderer):
     """
     Renderer which serializes to JSON.

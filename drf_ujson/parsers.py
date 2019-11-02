@@ -3,8 +3,6 @@ from rest_framework.parsers import BaseParser, ParseError
 from rest_framework.renderers import JSONRenderer
 import ujson
 
-
-__author__ = "y.gavenchuk aka murminathor"
 __all__ = ["UJSONParser"]
 
 
