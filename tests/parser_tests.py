@@ -2,6 +2,7 @@ from io import BytesIO
 
 import pytest
 import ujson
+from rest_framework.exceptions import ParseError
 
 from drf_ujson.parsers import UJSONParser
 
@@ -39,3 +40,12 @@ def test_parser_works_correctly_when_media_type_and_context_provided(uut, data):
     )
 
     assert parsed == data
+
+
+def test_parser_catches_value_error_and_reraises_parse_error(uut, data, mocker):
+    mock_ujson = mocker.patch("drf_ujson.parsers.ujson")
+    mock_ujson.loads.side_effect = [ValueError("hello")]
+
+    dumped = ujson.dumps(data)
+    with pytest.raises(ParseError, match="hello"):
+        uut.parse(BytesIO(dumped.encode("utf-8")))

@@ -17,5 +17,5 @@ setup(
     url="https://github.com/Amertz08/drf-ujson-renderer",
     packages=find_packages(),
     install_requires=["django", "ujson", "djangorestframework"],
-    extras_require={"dev": ["pytest", "pytest-runner", "pytest-cov"]},
+    extras_require={"dev": ["pytest", "pytest-runner", "pytest-cov", "pytest-mock"]},
 )

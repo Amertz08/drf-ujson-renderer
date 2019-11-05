@@ -32,3 +32,9 @@ def test_renderer_works_correctly_when_media_type_and_context_provided(uut, data
     reloaded = ujson.loads(rendered)
 
     assert reloaded == data
+
+
+def test_renderer_gets_no_data_returns_empty_bytes(uut):
+    rendered = uut.render(None)
+
+    assert rendered == b""
