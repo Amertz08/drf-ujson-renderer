@@ -3,6 +3,11 @@
 - h3 heading
 - X.X.X - YYYY-MM-DD
 
+### 1.4.0 - XXXX-XX-XX
+
+- Drop `py3.4` support
+- Added type hinting
+
 ### 1.3.0 - XXXX-XX-XX
 
 - Dropped `py2` support
