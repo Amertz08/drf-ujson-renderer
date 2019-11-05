@@ -1,3 +1,5 @@
+from typing import IO, Optional
+
 from django.conf import settings
 from rest_framework.parsers import BaseParser, ParseError
 from rest_framework.renderers import JSONRenderer
@@ -14,7 +16,12 @@ class UJSONParser(BaseParser):
     media_type = "application/json"
     renderer_class = JSONRenderer
 
-    def parse(self, stream, media_type=None, parser_context=None):
+    def parse(
+        self,
+        stream: IO[bytes],
+        media_type: Optional[str] = None,
+        parser_context: Optional[dict] = None,
+    ) -> dict:
         """
         Parses the incoming bytestream as JSON and returns the resulting data.
         """

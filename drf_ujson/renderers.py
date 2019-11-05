@@ -1,3 +1,5 @@
+from typing import Any
+
 from rest_framework.renderers import BaseRenderer
 import ujson
 
@@ -17,7 +19,7 @@ class UJSONRenderer(BaseRenderer):
     ensure_ascii = True
     charset = None
 
-    def render(self, data, *args, **kwargs):
+    def render(self, data: Any, *args, **kwargs) -> bytes:
 
         if data is None:
             return bytes()
