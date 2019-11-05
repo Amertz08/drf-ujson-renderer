@@ -25,4 +25,4 @@ class UJSONParser(BaseParser):
             data = stream.read().decode(encoding)
             return ujson.loads(data)
         except ValueError as exc:
-            raise ParseError("JSON parse error - %s" % exc)
+            raise ParseError("JSON parse error - %s" % str(exc))
