@@ -9,7 +9,7 @@
     - Only supporting `>=3.4`
 - Unpinned `djangorestframework`
 
-### 1.2.1 - XXXX-XX-XX
+### 1.2.1 - 2019-11-4
 
 - Pinned `djangorestframework<3.10`
 - Added `MANIFEST.in`
