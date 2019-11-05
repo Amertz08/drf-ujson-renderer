@@ -4,6 +4,9 @@ from rest_framework.renderers import BaseRenderer
 import ujson
 
 
+__all__ = ["UJSONRenderer"]
+
+
 class UJSONRenderer(BaseRenderer):
     """
     Renderer which serializes to JSON.
@@ -11,8 +14,8 @@ class UJSONRenderer(BaseRenderer):
     Uses the blazing-fast ujson library for serialization.
     """
 
-    media_type = 'application/json'
-    format = 'json'
+    media_type = "application/json"
+    format = "json"
     ensure_ascii = True
     charset = None
 
@@ -25,5 +28,5 @@ class UJSONRenderer(BaseRenderer):
 
         # force return value to unicode
         if isinstance(ret, six.text_type):
-            return bytes(ret.encode('utf-8'))
+            return bytes(ret.encode("utf-8"))
         return ret

@@ -1,8 +1,16 @@
 language: python
+
+sudo: false
+
 python:
   - "2.7"
-  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+
 install:
-  - pip install -r test_requirements.txt
-  - pip install . --use-mirrors
-script: nosetests
+  - pip install tox tox-travis
+
+script:
+    - tox

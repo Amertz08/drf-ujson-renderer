@@ -14,11 +14,11 @@ class UJSONRendererTests(TestCase):
     def setUp(self):
         self.renderer = UJSONRenderer()
         self.data = {
-            'a': [1, 2, 3],
-            'b': True,
-            'c': 1.23,
-            'd': 'test',
-            'e': {'foo': 'bar'},
+            "a": [1, 2, 3],
+            "b": True,
+            "c": 1.23,
+            "d": "test",
+            "e": {"foo": "bar"},
         }
 
     def test_basic_data_structures_rendered_correctly(self):
@@ -31,9 +31,7 @@ class UJSONRendererTests(TestCase):
     def test_renderer_works_correctly_when_media_type_and_context_provided(self):
 
         rendered = self.renderer.render(
-            data=self.data,
-            media_type='application/json',
-            renderer_context={},
+            data=self.data, media_type="application/json", renderer_context={}
         )
         reloaded = ujson.loads(rendered)
 
@@ -44,25 +42,25 @@ class UJSONParserTests(TestCase):
     def setUp(self):
         self.parser = UJSONParser()
         self.data = {
-            'a': [1, 2, 3],
-            'b': True,
-            'c': 1.23,
-            'd': 'test',
-            'e': {'foo': 'bar'},
+            "a": [1, 2, 3],
+            "b": True,
+            "c": 1.23,
+            "d": "test",
+            "e": {"foo": "bar"},
         }
 
     def test_basic_data_structures_parsed_correctly(self):
 
         dumped = ujson.dumps(self.data)
-        parsed = self.parser.parse(BytesIO(dumped.encode('utf-8')))
+        parsed = self.parser.parse(BytesIO(dumped.encode("utf-8")))
 
         self.assertEqual(parsed, self.data)
 
     def test_parser_works_correctly_when_media_type_and_context_provided(self):
         dumped = ujson.dumps(self.data)
         parsed = self.parser.parse(
-            stream=BytesIO(dumped.encode('utf-8')),
-            media_type='application/json',
+            stream=BytesIO(dumped.encode("utf-8")),
+            media_type="application/json",
             parser_context={},
         )
 
