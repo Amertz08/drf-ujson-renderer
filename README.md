@@ -8,7 +8,7 @@ Django Rest Framework renderer using [ujson](https://github.com/esnme/ultrajson)
 
 ## Installation
 
-`pip install drf_ujson`
+`pip install drf_ujson2`
 
 You can then set the `UJSONRenderer` class as your default renderer in your `settings.py`
 
