@@ -18,4 +18,11 @@ setup(
     packages=find_packages(),
     install_requires=["django", "ujson>=1.35", "djangorestframework"],
     extras_require={"dev": ["pytest", "pytest-runner", "pytest-cov", "pytest-mock"]},
+    classifiers=[
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+    ],
 )
