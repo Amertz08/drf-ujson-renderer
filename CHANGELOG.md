@@ -6,7 +6,10 @@
 ### 1.4.0 - 2019-XX-XX
 
 - Drop `py27` support
-- Don't include tests module in package
+
+### 1.3.1 - 2019-11-05
+
+- Don't include `tests` module in build
 
 ### 1.3.0 - 2019-11-05
 
