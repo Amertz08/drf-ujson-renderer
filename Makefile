@@ -2,10 +2,10 @@
 install:
 	@pip install \
 	--force-reinstall \
-	.
+	.[dev]
 
 test:
-	@pytest
+	@python setup.py test
 
 dist:
 	@python setup.py sdist bdist_wheel
