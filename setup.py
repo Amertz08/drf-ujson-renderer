@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="drf_ujson2",
-    version="1.3dev2",
+    version="1.3",
     python_requires=">=2.7",
     description="Django Rest Framework UJSON Renderer",
     long_description=long_description,
