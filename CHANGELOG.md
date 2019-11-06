@@ -3,6 +3,10 @@
 - h3 heading
 - X.X.X - YYYY-MM-DD
 
+### 1.3.1 - 2019-11-5
+
+- Don't include `tests` module in build
+
 ### 1.3.0 - 2019-11-5
 
 - Fix DRF4 import path
