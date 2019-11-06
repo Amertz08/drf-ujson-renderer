@@ -28,7 +28,9 @@ def test_basic_data_structures_rendered_correctly(uut, data):
 
 
 def test_renderer_works_correctly_when_media_type_and_context_provided(uut, data):
-    rendered = uut.render(data=data, accepted_media_type="application/json", renderer_context={})
+    rendered = uut.render(
+        data=data, accepted_media_type="application/json", renderer_context={}
+    )
     reloaded = ujson.loads(rendered)
 
     assert reloaded == data
