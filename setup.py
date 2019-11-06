@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 setup(
     name="drf_ujson2",
     version="1.3",
-    python_requires=">=2.7",
+    python_requires=">=3.4",
     description="Django Rest Framework UJSON Renderer",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -16,6 +16,6 @@ setup(
     author_email="tech@gizmag.com",
     url="https://github.com/Amertz08/drf-ujson-renderer",
     packages=find_packages(),
-    install_requires=["django", "ujson>=1.35", "djangorestframework<3.10"],
+    install_requires=["django", "ujson>=1.35", "djangorestframework"],
     extras_require={"dev": ["pytest", "pytest-runner", "pytest-cov", "pytest-mock"]},
 )

@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-from rest_framework.compat import six
 from rest_framework.renderers import JSONRenderer
 import ujson
 
@@ -40,7 +38,7 @@ class UJSONRenderer(JSONRenderer):
         )
 
         # force return value to unicode
-        if isinstance(ret, six.text_type):
+        if isinstance(ret, str):
             # We always fully escape \u2028 and \u2029 to ensure we output JSON
             # that is a strict javascript subset. If bytes were returned
             # by json.dumps() then we don't have these characters in any case.
